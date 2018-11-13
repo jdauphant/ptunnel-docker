@@ -11,4 +11,4 @@ WORKDIR /ptunnel/ptunnel-rust-master
 RUN cargo build --release
 
 EXPOSE 2000
-CMD CMD ["sh", "-c", "target/release/ptunnel -p $https_proxy $LOCAL_POST:$REMOTE_HOST:$REMOTE_PORT"]
+CMD CMD ["sh", "-c", "target/release/ptunnel $OPTIONS $LOCAL_POST:$REMOTE_HOST:$REMOTE_PORT"]
