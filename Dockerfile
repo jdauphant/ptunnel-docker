@@ -8,4 +8,4 @@ RUN wget -O ptunnel.tar.gz "https://github.com/izderadicka/ptunnel-rust/archive/
 WORKDIR /ptunnel/ptunnel-rust-master
 RUN cargo build --release
 
-CMD CMD ["sh", "-c", "target/release/ptunnel -p $HTTPS_PROXY $PTUNNEL_TUNNEL"]
+CMD CMD ["sh", "-c", "target/release/ptunnel -p $https_proxy $PTUNNEL_TUNNEL"]
